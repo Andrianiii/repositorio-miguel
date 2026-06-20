@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - DáUmHelp
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+
+
+    <header class="topo">
+
+        <h1 class="logo">
+            Dá<span>Um</span>Help
+        </h1> <!--Cabeçalho da página -->
+
+        <nav>
+
+            <a href="index.html">Início</a> <!--volta a pagina inicial -->
+
+        </nav>
+    </header>
+
+    <main> <!--Conteúdo principal da página -->
+
+        <section>
+
+            <h2>Criar conta</h2>
+
+            <p>Cadastre-se como candidato ou empresa.</p> <!--Explicando a função da tela -->
+
+            <form action="DaUmHelp/php/cadastro.php" method="post">
+                <!--action fara o cadastro utilizando o php. Post envia os dados-->
+
+                <div>
+                    <label for="tipo_usuario">Tipo de conta</label>
+
+                    <select id="tipo_usuario" name="tipo_usuario" required>
+                        <option value="">Selecione</option>
+                        <option value="candidato">Candidato</option>
+                        <option value="empresa">Empresa</option>
+                    </select>
+
+                </div>
+
+                <div>
+
+                    <label for="nome">Nome</label>
+
+                    <input type="text" id="nome" name="nome" required>
+
+                </div>
+
+                <div>
+
+                    <label for="email">E-mail</label>
+
+                    <input type="email" id="email" name="email" required>
+
+                </div>
+
+                <div>
+
+                    <label for="telefone">Telefone</label>
+
+                    <input type="text" id="telefone" name="telefone" required>
+
+                </div>
+
+                <div>
+
+                    <label for="cidade">Cidade</label>
+
+                    <input type="text" id="cidade" name="cidade" required>
+
+                </div>
+
+                <div>
+
+                    <label for="senha">Senha</label>
+
+                    <input type="password" id="senha" name="senha" required>
+
+                </div>
+
+                <div>
+
+                    <label for="confirmar_senha">
+                        Confirmar senha</label>
+
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+
+                </div>
+
+
+                <!--Botão para enviar o cadastro -->
+                <button type="submit">
+                    Criar conta
+                </button>
+
+                <!--Área de login -->
+                <div class="cadastro-area">
+
+                    <p>Ja possui conta?</p>
+
+                    <!--Link para tela de login -->
+
+                    <a href="login.html" class="btn-cadastro">
+                        Entrar
+                    </a>
+
+                </div>
+
+            </form>
+
+
+
+        </section>
+
+    </main>
+</body>
+
+</html>

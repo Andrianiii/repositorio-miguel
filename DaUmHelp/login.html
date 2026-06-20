@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsividade para celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - DáUmHelp</title>
+
+    <!-- Fontes usadas no site principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSsS -->
+    <link rel="stylesheet" href=css/forms.css>
+    
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header class="topo">
+
+        <!-- Logo do sistema -->
+        <h1 class="logo">
+            Dá<span>Um</span>Help
+        </h1>
+
+        <!-- Link para voltar à página inicial -->
+        <nav>
+            <a href="DaUmHelp-1.html">Início</a>
+        </nav>
+
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Caixa de login -->
+        <section>
+
+            <!-- Título da área de login -->
+            <h2>Entrar na sua conta</h2>
+
+            <!-- Pequena explicação da tela -->
+            <p>Acesse como candidato ou empresa.</p>
+
+            <!-- 
+                Formulário de login.
+                Futuramente, action="login.php" enviará os dados para o PHP.
+            -->
+            <form action="php/login.php" method="post">
+
+                <!-- Campo para escolher o tipo de usuário -->
+                <div>
+                    <label for="tipo_usuario">Tipo de conta</label>
+
+                    <!-- 
+                        Select cria uma lista de opções.
+                        O PHP usará esse valor para saber onde procurar o usuário.
+                    -->
+                    <select id="tipo_usuario" name="tipo_usuario" required>
+                        <option value="">Selecione</option>
+                        <option value="candidato">Candidato</option>
+                        <option value="empresa">Empresa</option>
+                    </select>
+                </div>
+
+                <!-- Campo de e-mail -->
+                <div>
+                    <label for="email">E-mail</label>
+
+                    <!-- 
+                        type="email" ajuda a validar o formato do e-mail.
+                        name="email" será usado pelo PHP.
+                    -->
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Campo de senha -->
+                <div>
+                    <label for="senha">Senha</label>
+
+                    <!-- type="password" esconde os caracteres digitados -->
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+
+                <!-- Botão para enviar o formulário -->
+                <button type="submit">Entrar</button>
+
+                <!-- Área para criar cadastro -->
+                <div class="cadastro-area">
+
+                    <p>Não possui conta?</p>
+
+                    <!-- Link para a tela de cadastro -->
+                    <a href="cadastro.html" class="btn-cadastro">
+                        Cadastre-se
+                    </a>
+
+                </div>
+
+                <!-- Link para recuperação de senha -->
+                <div class="senha-link">
+
+                    <a href="recuperar-senha.html">
+                        Esqueceu sua senha?
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

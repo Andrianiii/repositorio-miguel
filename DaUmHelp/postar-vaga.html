@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postar Vaga - DáUmHelp</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+
+            Dá<span>Um</span>Help
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="sobre.html">Sobre</a>
+
+            <a href="php/vagas.php">Vagas</a>
+
+            <a href="postar-vaga.html" class="active">Postar Vaga</a>
+
+            <a href="contato.html">Contato</a>
+
+        </div>
+
+        <a href="login.html" class="nav-cta">
+            Entrar
+        </a>
+
+    </nav>
+
+    <main>
+
+        <section class="section">
+
+            <div class="section-tag">
+                Empresas
+            </div>
+
+            <h1 class="section-title">
+                Publicar Nova Vaga
+            </h1>
+
+
+            <p>
+                Preencha as informações abaixo para divulgar uma oportunidade.
+            </p>
+            <div class="contato-form">
+                <form action="php/postar-vaga.php" method="post">
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>
+                                Nome da Empresa
+                            </label>
+
+                            <input type="text" name="empresa" placeholder="Digite o nome da empresa">
+                            </div>
+                            
+                        <div class="form-group">
+                            <label>
+                                Cargo
+                            </label>
+
+                            <input type="text" name="cargo" placeholder="Digite o cargo">
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Área
+                            </label>
+
+                            <input type="text" name="area" placeholder="Digite a área">
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Localização
+                            </label>
+
+                            <input type="text" name="localizacao" placeholder="Digite a cidade da vaga">
+                        </div>
+
+                        <div class="form-group full">
+                            <label>
+                                Salário
+                            </label>
+
+                            <input type="text" name="salario" placeholder="Digite o salário">
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Tipo de contrato
+                            </label>
+
+                            <select name="tipo">
+                                <option value="">Selecione</option>
+                                <option value="CLT">CLT</option>
+                                <option value="PJ">PJ</option>
+                                <option value="Estágio">Estágio</option>
+                                <option value="Freelance">Freelance</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Modalidade
+                            </label>
+
+                            <select name="modalidade">
+                                <option value="">Selecione</option>
+                                <option value="Presencial">Presencial</option>
+                                <option value="Híbrido">Híbrido</option>
+                                <option value="Remoto">Remoto</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label>
+                                Descrição da Vaga
+                            </label>
+
+                            <textarea name="descricao" placeholder="Descreva os requisitos, atividades e benefícios da vaga"></textarea>
+                        </div>
+                    </div>
+                    <button class="form-submit" type="submit">
+                        Publicar Vaga
+                    </button>
+                    
+                </form>
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
