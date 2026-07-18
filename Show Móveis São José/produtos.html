@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="pagina-produtos">
+
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-showmoveis">
+
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+
+                    <img src="img/logo loja.jpeg" alt="Logo Show Móveis São José">
+
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="quem_somos.html">
+                                Quem Somos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="produtos.html" aria-current="page">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="novidades.html">
+                                Novidades
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">
+                                Contato
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+
+                            <a class="btn btn-whatsapp-header" href="https://wa.me/551637284266" target="_blank">
+
+                                <i class="bi bi-whatsapp"></i>
+
+                                Fale conosco
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="produtos-page">
+
+        <div class="produtos-cabecalho text-center">
+
+            <span class="subtitulo">
+                Nosso catálogo
+            </span>
+
+            <h1>
+                Encontre o móvel ideal para sua casa
+            </h1>
+
+            <p>
+                Explore nossas categorias e consulte disponibilidade,
+                modelos e condições diretamente pelo WhatsApp.
+            </p>
+
+        </div>
+
+        <div class="produtos-layout">
+           <aside class="filtros">
+
+    <div class="filtros-cabecalho">
+
+        <span class="filtros-subtitulo">
+            Navegue por
+        </span>
+
+        <h2>
+            Categorias
+        </h2>
+
+    </div>
+
+    <div class="filtros-lista">
+
+        <button
+            type="button"
+            class="filtro-btn ativo"
+            data-filtro="todos"
+        >
+            <span class="filtro-conteudo">
+                <i class="bi bi-grid-fill"></i>
+                Todos
+            </span>
+
+            <i class="bi bi-chevron-right filtro-seta"></i>
+        </button>
+
+        <button
+            type="button"
+            class="filtro-btn"
+            data-filtro="sofas"
+        >
+            <span class="filtro-conteudo">
+                <i class="bi bi-house-heart"></i>
+                Sofás
+            </span>
+
+            <i class="bi bi-chevron-right filtro-seta"></i>
+        </button>
+
+        <button
+            type="button"
+            class="filtro-btn"
+            data-filtro="colchoes"
+        >
+            <span class="filtro-conteudo">
+                <i class="bi bi-moon-stars"></i>
+                Colchões
+            </span>
+
+            <i class="bi bi-chevron-right filtro-seta"></i>
+        </button>
+
+        <button
+            type="button"
+            class="filtro-btn"
+            data-filtro="guarda-roupas"
+        >
+            <span class="filtro-conteudo">
+                <i class="bi bi-door-closed"></i>
+                Guarda-Roupas
+            </span>
+
+            <i class="bi bi-chevron-right filtro-seta"></i>
+        </button>
+
+        <button
+            type="button"
+            class="filtro-btn"
+            data-filtro="cozinhas"
+        >
+            <span class="filtro-conteudo">
+                <i class="bi bi-cup-hot"></i>
+                Cozinhas
+            </span>
+
+            <i class="bi bi-chevron-right filtro-seta"></i>
+        </button>
+
+        <button
+            type="button"
+            class="filtro-btn"
+            data-filtro="paineis"
+        >
+            <span class="filtro-conteudo">
+                <i class="bi bi-tv"></i>
+                Painéis
+            </span>
+
+            <i class="bi bi-chevron-right filtro-seta"></i>
+        </button>
+
+        <button
+            type="button"
+            class="filtro-btn"
+            data-filtro="mesas"
+        >
+            <span class="filtro-conteudo">
+                <i class="bi bi-lamp"></i>
+                Mesas e Cadeiras
+            </span>
+
+            <i class="bi bi-chevron-right filtro-seta"></i>
+        </button>
+
+    </div>
+
+</aside>
+            <section class="lista-produtos">
+
+            </section>
+        </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <img src="img/banner_logo_definitivo.png" alt="Show Móveis São José" class="footer-logo">
+
+                    <p class="footer-texto">
+                        Mais de 100 anos levando qualidade, conforto
+                        e confiança para toda a região.
+                    </p>
+
+                </div>
+
+                <div class="col-6 col-lg-2">
+
+                    <h3>Links</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-6 col-lg-3">
+
+                    <h3>Atendimento</h3>
+
+                    <ul class="footer-contato">
+
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            (16) 3728-4266
+                        </li>
+
+                        <li>
+                            <i class="bi bi-whatsapp"></i>
+                            (16) 3728-4266
+                        </li>
+
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            São Joaquim da Barra - SP
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h3>Fale conosco</h3>
+
+                    <p class="footer-texto">
+                        Entre em contato para consultar preços,
+                        condições e disponibilidade.
+                    </p>
+
+                    <a href="https://wa.me/551637284266" target="_blank" class="btn btn-success">
+                        <i class="bi bi-whatsapp"></i>
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-divisor"></div>
+
+            <div class="footer-final">
+
+                <p>
+                    © 2026 Show Móveis São José.
+                    Todos os direitos reservados.
+                </p>
+
+                <p>
+                    Desenvolvido por Miguel Andriani
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <div class="radio-flutuante">
+
+        <iframe src="https://player.hdradios.net/player-topo-moderno3/8488/0f45e6" frameborder="0">
+        </iframe>
+
+    </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/produtos.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
