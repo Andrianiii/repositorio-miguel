@@ -15,6 +15,10 @@
     rel="stylesheet"
 >
 
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -27,11 +31,25 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-showmoveis">
-            <div class="container">
+            <div class="container-fluid px-4 px-xl-5">
 
                 <a class="navbar-brand" href="index.html">
-                    <img src="img/logo loja.jpeg" alt="Logo Show Móveis São José">
+                    <img src="img/logo loja.jpeg"
+                     alt="Logo Show Móveis São José"
+                     class="navbar-logo"
+                     >
                 </a>
+
+
+    <div class="radio-navbar">
+        <iframe
+            src="https://player.hdradios.net/player-topo-moderno3/8488/0f45e6"
+            title="Rádio Show Móveis"
+            scrolling="no"
+            frameborder="0"
+            allow="autoplay"
+        ></iframe>
+    </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
                     aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
@@ -63,14 +81,25 @@
                             <a class="nav-link" href="contato.html">Contato</a>
                         </li>
 
-                        <li class="nav-item ms-lg-3">
-                            <a class="btn btn-whatsapp-header" href="https://wa.me/551637284266" target="_blank">
-                                <i class="bi bi-whatsapp"></i>
-                                Fale conosco
-                            </a>
-                        </li>
-
                     </ul>
+
+                    <div class="redes-navbar">
+                        <a href="https://www.instagram.com/show_moveissaojose/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/SHOWMOVEISAOJOSE" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+
+                    <a class="btn btn-whatsapp-header ms-lg-3"
+                       href="https://wa.me/551637284266"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="bi bi-whatsapp"></i>
+                        Fale conosco
+                    </a>
 
                 </div>
 
@@ -82,26 +111,34 @@
 
     <main> <!--Conteúdo principal-->
 
-        <section class="hero d-flex animar">
+        <section class="hero animar">
 
-            <div class="hero-content">
+            
 
-                <img src="img/banner_logo_definitivo.png" alt="Show Móveis São José">
+               
+        </section>
+
+        <section class="apresentacao-home animar">
+
+            <div class="container">
+
+                <div class="apresentacao-content">
+                 <img src="img/banner_logo_definitivo.png" alt="Show Móveis São José" class="apresentacao-logo">
 
                 <h1>Mais de 100 anos de tradição</h1>
 
                 <p>
                     Há gerações oferecendo móveis de qualidade,
-                    atendimento especializado e confiança para toda a região.
+                    atendimento especializado e confiança para toda a região de São Joaquim da Barra SP.
                 </p>
 
-                <div class="hero-buttons">
+                <div class="apresentacao-buttons">
 
                     <a href="produtos.html" class="btn btn-primary btn-lg">
                         Ver Produtos
                     </a>
 
-                    <a href="https://wa.me/551637284266" class="btn btn-success btn-lg" target="_blank">
+                    <a href="https://wa.me/551637284266" class="btn btn-success btn-lg" target="_blank" rel="noopener noreferrer">
 
                         <i class="bi bi-whatsapp"></i>
                         WhatsApp
@@ -110,26 +147,11 @@
 
                 </div>
 
-                <div class="hero-infos">
-
-                    <div>
-                        <i class="bi bi-award-fill"></i>
-                        <span>+100 anos</span>
-                    </div>
-
-                    <div>
-                        <i class="bi bi-truck"></i>
-                        <span>Entrega grátis</span>
-                    </div>
-
-                    <div>
-                        <i class="bi bi-credit-card"></i>
-                        <span>Parcelamento</span>
-                    </div>
-
-                </div>
+                
 
             </div>
+           
+</div>
         </section>
 
         <section class="beneficios animar">
@@ -149,7 +171,7 @@
                             <h2>Entrega gratuita</h2>
 
                             <p>
-                                Entrega e montagem grátis para toda a região.
+                                Entrega e montagem grátis para toda a região de São Joaquim da Barra SP.
                             </p>
 
                         </div>
@@ -293,7 +315,7 @@
 
                     <p class="footer-texto">
                         Mais de 100 anos levando qualidade, conforto
-                        e confiança para toda a região.
+                        e confiança para toda a região de São Joaquim da Barra SP.
                     </p>
 
                 </div>
@@ -328,7 +350,8 @@
 
                         <li>
                             <i class="bi bi-geo-alt-fill"></i>
-                            São Joaquim da Barra - SP
+                            Praça Magino Diniz Junqueira, 381
+                            <br>São Joaquim da Barra - SP
                         </li>
 
                     </ul>
@@ -344,10 +367,24 @@
                         condições e disponibilidade.
                     </p>
 
-                    <a href="https://wa.me/551637284266" target="_blank" class="btn btn-success">
+                    <a href="https://wa.me/551637284266" target="_blank" rel="noopener noreferrer" class="btn btn-success">
                         <i class="bi bi-whatsapp"></i>
                         WhatsApp
                     </a>
+
+                    <div class="footer-redes-links mt-4">
+
+                        <a href="https://www.instagram.com/show_moveissaojose/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+
+                        <a href="https://www.facebook.com/SHOWMOVEISAOJOSE" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -363,7 +400,8 @@
                 </p>
 
                 <p>
-                    Desenvolvido por Miguel Andriani
+                   Desenvolvido por Miguel Andriani
+                    <br>(16) 99200-8087
                 </p>
 
             </div>

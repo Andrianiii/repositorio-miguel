@@ -68,7 +68,7 @@ header {
 
     padding: 0;
 
-    background-color: rgba(0, 31, 122, 0.95);
+    background-color: rgba(0, 31, 122, 0.78);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
@@ -85,27 +85,32 @@ header {
 }
 
 .navbar-showmoveis .container {
-    max-width: 1200px;
+    width: calc(100% - 40px);
+    max-width: 1540px;
     height: 100%;
+    margin: 0 auto;
+
     display: flex;
     align-items: center;
+    gap: 18px;
 }
 
 .navbar-showmoveis .navbar-brand {
+    flex: 0 0 auto;
     padding: 0;
-    margin-right: 30px;
+    margin: 0 6px 0 0;
 }
 
 .navbar-showmoveis .navbar-brand img {
-    width:145px;
-    height:auto;
+    width: 138px;
+    height: auto;
     display:block;
     object-fit:contain;
     transition:all .35s ease;
 }
 
 .navbar-showmoveis.scrolled .navbar-brand img {
-    width:130px;
+    width: 122px;
 }
 
 .navbar-showmoveis .navbar-nav {
@@ -168,6 +173,51 @@ header {
 .navbar-showmoveis .nav-link:hover::after,
 .navbar-showmoveis .nav-link.active::after {
     width: 45%;
+}
+
+/* ========================= */
+/* PLAYER DA RÁDIO NA NAVBAR */
+/* ========================= */
+
+.radio-navbar {
+    flex: 0 0 285px;
+    width: 285px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+
+    transition: all 0.3s ease;
+}
+
+.radio-navbar iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+.navbar-showmoveis.scrolled .radio-navbar {
+    border-color: rgba(0, 59, 255, 0.14);
+    background: var(--branco);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-showmoveis .navbar-collapse {
+    flex-grow: 1;
+    margin-left: auto;
+}
+
+.navbar-showmoveis .navbar-nav {
+    margin-left: auto;
 }
 
 /* ========================= */
@@ -251,110 +301,98 @@ header {
 }
 
 /* ========================= */
-/* HERO */
+/* HERO: SOMENTE O BANNER */
 /* ========================= */
 
 .hero {
-    min-height: 85vh;
-
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-image:
-        linear-gradient(rgba(0, 20, 70, 0.58),
-            rgba(0, 20, 70, 0.58)),
-        url("../img/banner.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.hero-content {
     width: 100%;
-    max-width: 1000px;
+    height: 100vh;
+    height: 100svh;
+    min-height: 650px;
 
-    text-align: center;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 
-    padding: 130px 20px 40px;
+    box-shadow:
+        inset 0 90px 110px -85px rgba(0, 0, 0, 0.45),
+        inset 0 -55px 80px -70px rgba(0, 0, 0, 0.38);
 }
 
-.hero-content img {
-    width: min(340px, 75%);
+/* ========================= */
+/* APRESENTAÇÃO DA HOME */
+/* ========================= */
 
-    margin-bottom: 35px;
+.apresentacao-home {
+    padding: 48px 20px 58px;
 
-    animation: subirLogo 1.2s ease forwards;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 244, 176, 0.38) 0%,
+            rgba(255, 255, 255, 1) 42%
+        );
 }
 
-.hero-content h1 {
-    margin-bottom: 20px;
+.apresentacao-conteudo {
+    width: 100%;
+    max-width: 920px;
 
-    color: var(--branco);
-
-    font-size: clamp(42px, 5vw, 62px);
-    font-weight: 800;
-    line-height: 1.1;
-
-    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
-}
-
-.hero-content p {
-    max-width: 760px;
     margin: 0 auto;
 
-    color: var(--branco);
-
-    font-size: 22px;
-    line-height: 1.7;
-
-    opacity: 0.95;
+    text-align: center;
 }
 
-.hero-content h1,
-.hero-content p {
-    opacity: 0;
-    animation: aparecerTexto 1s ease forwards;
-    animation-delay: 1s;
+.apresentacao-conteudo > .subtitulo {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
 }
 
-@keyframes subirLogo {
-    from {
-        transform: translateY(40px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.apresentacao-logo {
+    width: min(240px, 62%);
+    height: auto;
+    display: block;
+    margin: 0 auto 14px;
+    object-fit: contain;
 }
 
-@keyframes aparecerTexto {
-    to {
-        opacity: 1;
-    }
+.apresentacao-conteudo h1 {
+    margin: 8px 0 14px;
+
+    color: var(--azul-escuro);
+
+    font-size: clamp(40px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.1;
 }
 
-/* ========================= */
-/* BOTÕES DO HERO */
-/* ========================= */
+.apresentacao-conteudo > p {
+    max-width: 760px;
 
-.hero-buttons {
+    margin: 0 auto;
+
+    color: #555;
+
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+.apresentacao-botoes {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
     gap: 18px;
 
-    margin-top: 35px;
-    margin-bottom: 45px;
-
-    flex-wrap: wrap;
+    margin-top: 22px;
+    margin-bottom: 22px;
 }
 
-.hero-buttons .btn {
+.apresentacao-botoes .btn {
+    min-width: 180px;
+
     padding: 14px 28px;
 
     border-radius: 50px;
@@ -367,45 +405,62 @@ header {
         box-shadow 0.3s ease;
 }
 
-.hero-buttons .btn:hover {
+.apresentacao-botoes .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
 }
 
-/* ========================= */
-/* INFORMAÇÕES DO HERO */
-/* ========================= */
+.apresentacao-infos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-.hero-infos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    gap: 18px;
 
-    flex-wrap: wrap;
+    max-width: 780px;
 
-    color: var(--branco);
-
-    font-size: 18px;
-    font-weight: 600;
+    margin: 0 auto;
 }
 
-.hero-infos div {
+.apresentacao-infos > div {
+    min-height: 104px;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+
     gap: 10px;
 
-    padding: 12px 22px;
+    padding: 19px 16px;
 
-    background-color: rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background-color: var(--branco);
 
-    border-radius: 40px;
+    border: 1px solid rgba(0, 59, 255, 0.09);
+    border-radius: 18px;
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.hero-infos i {
-    color: var(--amarelo);
-    font-size: 24px;
+.apresentacao-infos > div:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.apresentacao-infos i {
+    color: var(--azul);
+
+    font-size: 28px;
+}
+
+.apresentacao-infos span {
+    color: var(--azul-escuro);
+
+    font-size: 17px;
+    font-weight: 800;
 }
 
 /* ========================= */
@@ -1245,8 +1300,8 @@ header {
 }
 
 .footer-logo {
-    width: 190px;
-    max-height: 80px;
+    width: 225px;
+    max-height: 96px;
 
     margin-bottom: 20px;
 
@@ -1430,7 +1485,18 @@ header {
     }
 
     .hero {
-        min-height: 540px;
+        height: 100vh;
+        height: 100svh;
+        min-height: 600px;
+        background-position: center center;
+    }
+
+    .apresentacao-home {
+        padding: 44px 20px 52px;
+    }
+
+    .apresentacao-conteudo > p {
+        font-size: 18px;
     }
 
     .produtos-page {
@@ -1496,29 +1562,52 @@ header {
 
 @media (max-width: 576px) {
     .hero {
-        min-height: 470px;
+        height: 100vh;
+        height: 100svh;
+        min-height: 560px;
+        background-position: center center;
     }
 
-    .hero-content {
-        padding: 110px 16px 30px;
+    .apresentacao-home {
+        padding: 38px 14px 44px;
     }
 
-    .hero-content h1 {
-        font-size: clamp(34px, 10vw, 46px);
+    .apresentacao-logo {
+        width: min(210px, 68%);
+        margin-bottom: 12px;
     }
 
-    .hero-content p {
+    .apresentacao-conteudo h1 {
+        font-size: clamp(34px, 10vw, 44px);
+    }
+
+    .apresentacao-conteudo > p {
         font-size: 17px;
-        line-height: 1.6;
+        line-height: 1.65;
     }
 
-    .hero-infos {
+    .apresentacao-botoes {
+        flex-direction: column;
+        align-items: stretch;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .apresentacao-botoes .btn {
+        width: 100%;
+    }
+
+    .apresentacao-infos {
+        grid-template-columns: 1fr;
         gap: 12px;
     }
 
-    .hero-infos div {
-        padding: 10px 16px;
-        font-size: 15px;
+    .apresentacao-infos > div {
+        min-height: auto;
+        flex-direction: row;
+
+        padding: 16px 18px;
     }
 
     .beneficios {
@@ -1608,7 +1697,7 @@ header {
 
 .navbar-showmoveis .nav-link:focus-visible,
 .btn-whatsapp-header:focus-visible,
-.hero-buttons .btn:focus-visible,
+.apresentacao-botoes .btn:focus-visible,
 .produto-info .btn:focus-visible,
 .footer .btn:focus-visible,
 .btn-whatsapp:focus-visible,
@@ -1631,5 +1720,561 @@ header {
     .animar {
         opacity: 1;
         transform: none;
+    }
+}
+/* =========================================================
+   AJUSTE FINAL DA HOME
+   Centraliza a apresentação e remove os cards duplicados
+   ========================================================= */
+
+.apresentacao-home {
+    padding: 56px 20px 64px;
+}
+
+/* Compatibilidade com os dois nomes de classe usados durante o projeto */
+.apresentacao-conteudo,
+.apresentacao-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.apresentacao-logo {
+    width: 230px;
+    max-width: 70%;
+    height: auto;
+
+    display: block;
+    margin: 0 auto 18px;
+
+    object-fit: contain;
+}
+
+.apresentacao-conteudo > .subtitulo,
+.apresentacao-content > .subtitulo {
+    display: block;
+    margin: 0 0 8px;
+
+    text-align: center;
+}
+
+.apresentacao-conteudo h1,
+.apresentacao-content h1 {
+    width: 100%;
+    max-width: 780px;
+
+    margin: 0 auto 16px;
+
+    color: var(--azul-escuro);
+    text-align: center;
+
+    font-size: clamp(38px, 4.5vw, 58px);
+    font-weight: 800;
+    line-height: 1.12;
+}
+
+.apresentacao-conteudo > p,
+.apresentacao-content > p {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: #555;
+    text-align: center;
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.apresentacao-botoes,
+.apresentacao-buttons {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+    margin: 24px auto 0;
+}
+
+.apresentacao-botoes .btn,
+.apresentacao-buttons .btn {
+    min-width: 170px;
+    padding: 13px 25px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border-radius: 999px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Os mesmos benefícios já aparecem na seção grande logo abaixo */
+.apresentacao-infos {
+    display: none !important;
+}
+
+@media (max-width: 576px) {
+    .apresentacao-home {
+        padding: 42px 16px 50px;
+    }
+
+    .apresentacao-logo {
+        width: 190px;
+        max-width: 72%;
+        margin-bottom: 16px;
+    }
+
+    .apresentacao-conteudo h1,
+    .apresentacao-content h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        margin-bottom: 14px;
+    }
+
+    .apresentacao-conteudo > p,
+    .apresentacao-content > p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .apresentacao-botoes,
+    .apresentacao-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-top: 22px;
+    }
+
+    .apresentacao-botoes .btn,
+    .apresentacao-buttons .btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+/* ========================================================= */
+/* AJUSTES FINAIS: LOGO À ESQUERDA E RÁDIO EM TODAS AS PÁGINAS */
+/* ========================================================= */
+
+@media (min-width: 1200px) {
+    .navbar-showmoveis .container {
+        width: calc(100% - 56px);
+    }
+}
+
+@media (max-width: 1199px) {
+    .radio-navbar {
+        flex-basis: 230px;
+        width: 230px;
+    }
+
+    .navbar-showmoveis .nav-link {
+        font-size: 15px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .btn-whatsapp-header,
+    .btn-whatsapp-header:link,
+    .btn-whatsapp-header:visited {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-showmoveis {
+        height: 78px;
+    }
+
+    .navbar-showmoveis .container {
+        width: calc(100% - 28px);
+        gap: 10px;
+    }
+
+    .navbar-showmoveis .navbar-brand {
+        margin-right: auto;
+    }
+
+    .navbar-showmoveis .navbar-brand img,
+    .navbar-showmoveis.scrolled .navbar-brand img {
+        width: 112px;
+    }
+
+    .radio-navbar {
+        flex: 0 0 210px;
+        width: 210px;
+        height: 50px;
+        margin-left: auto;
+    }
+
+    .navbar-showmoveis .navbar-toggler {
+        flex: 0 0 auto;
+    }
+
+    .navbar-showmoveis .navbar-collapse {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 14px;
+        right: 14px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .radio-navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-showmoveis .container {
+        width: calc(100% - 20px);
+    }
+
+    .navbar-showmoveis .navbar-brand img,
+    .navbar-showmoveis.scrolled .navbar-brand img {
+        width: 102px;
+    }
+}
+
+/* O player agora fica na navbar; evita dois players aparecendo juntos. */
+.radio-flutuante,
+.radio-player {
+    display: none !important;
+}
+
+/* =========================================================
+   CORREÇÃO DEFINITIVA DA NAVBAR E DO PLAYER DA RÁDIO
+   Mantém o CSS original e sobrescreve apenas o necessário.
+   ========================================================= */
+
+/* Compatibilidade com o container-fluid usado no HTML */
+.navbar-showmoveis > .container-fluid {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+}
+
+/* Logo da navbar */
+.navbar-showmoveis .navbar-logo {
+    width: 138px;
+    height: auto;
+
+    display: block;
+    object-fit: contain;
+
+    transition:
+        width 0.35s ease,
+        max-height 0.35s ease;
+}
+
+.navbar-showmoveis.scrolled .navbar-logo {
+    width: 122px;
+}
+
+/*
+   O player original é mais largo que o espaço da navbar.
+   Em vez de cortar o iframe, mantemos sua largura natural
+   e reduzimos visualmente com transform: scale().
+*/
+.navbar-showmoveis .radio-navbar {
+    flex: 0 0 260px;
+
+    width: 260px;
+    min-width: 260px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 0 18px 0 4px;
+
+    overflow: hidden;
+
+    background: transparent;
+    border: 0;
+    border-radius: 14px;
+    box-shadow: none;
+}
+
+.navbar-showmoveis .radio-navbar iframe {
+    width: 320px;
+    min-width: 320px;
+    height: 66px;
+
+    display: block;
+
+    border: 0;
+    border-radius: 14px;
+
+    transform: scale(0.81);
+    transform-origin: left center;
+}
+
+.navbar-showmoveis.scrolled .radio-navbar {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* O menu ocupa o espaço restante */
+.navbar-showmoveis .navbar-collapse {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: auto;
+}
+
+.navbar-showmoveis .navbar-nav {
+    margin-left: auto;
+}
+
+/* Evita o player antigo duplicado */
+.radio-flutuante,
+.radio-player {
+    display: none !important;
+}
+
+/* Notebooks e telas médias */
+@media (max-width: 1250px) {
+    .navbar-showmoveis > .container-fluid {
+        gap: 10px;
+
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .navbar-showmoveis .radio-navbar {
+        flex-basis: 220px;
+
+        width: 220px;
+        min-width: 220px;
+        height: 48px;
+
+        margin-right: 8px;
+    }
+
+    .navbar-showmoveis .radio-navbar iframe {
+        width: 320px;
+        min-width: 320px;
+        height: 66px;
+
+        transform: scale(0.69);
+    }
+
+    .navbar-showmoveis .nav-link {
+        font-size: 15px;
+
+        padding-left: 9px !important;
+        padding-right: 9px !important;
+    }
+
+    .btn-whatsapp-header,
+    .btn-whatsapp-header:link,
+    .btn-whatsapp-header:visited {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* Tablet e menu recolhido */
+@media (max-width: 991px) {
+    .navbar-showmoveis {
+        height: 78px;
+        min-height: 78px;
+        padding: 0;
+    }
+
+    .navbar-showmoveis > .container-fluid {
+        gap: 10px;
+
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .navbar-showmoveis .navbar-brand {
+        margin-right: auto;
+    }
+
+    .navbar-showmoveis .navbar-logo,
+    .navbar-showmoveis.scrolled .navbar-logo {
+        width: 112px;
+    }
+
+    .navbar-showmoveis .radio-navbar {
+        flex: 0 0 190px;
+
+        width: 190px;
+        min-width: 190px;
+        height: 44px;
+
+        margin: 0 8px 0 auto;
+    }
+
+    .navbar-showmoveis .radio-navbar iframe {
+        width: 320px;
+        min-width: 320px;
+        height: 66px;
+
+        transform: scale(0.60);
+    }
+
+    .navbar-showmoveis .navbar-toggler {
+        flex: 0 0 auto;
+    }
+
+    .navbar-showmoveis .navbar-collapse {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 14px;
+        right: 14px;
+
+        margin: 0;
+    }
+}
+
+/* Celulares: esconde a rádio para preservar a navegação */
+@media (max-width: 700px) {
+    .navbar-showmoveis .radio-navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-showmoveis > .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .navbar-showmoveis .navbar-logo,
+    .navbar-showmoveis.scrolled .navbar-logo {
+        width: 102px;
+    }
+}
+
+/* =========================================================
+   REDES SOCIAIS - NAVBAR E RODAPÉ
+   ========================================================= */
+
+.redes-navbar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-left:18px;
+}
+
+.redes-navbar a{
+    width:40px;
+    height:40px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    color:var(--branco);
+
+    border:1px solid rgba(255,255,255,.28);
+    border-radius:50%;
+
+    font-size:18px;
+
+    transition:
+        transform .25s ease,
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.redes-navbar a:hover{
+    color:var(--amarelo);
+    background:rgba(255,255,255,.12);
+    transform:translateY(-2px);
+}
+
+.navbar-showmoveis.scrolled .redes-navbar a{
+    color:var(--azul-escuro);
+    border-color:rgba(0,59,255,.18);
+}
+
+.navbar-showmoveis.scrolled .redes-navbar a:hover{
+    color:var(--azul);
+    background:rgba(0,59,255,.08);
+}
+
+.footer-redes-links{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-redes-links a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:rgba(255,255,255,.78);
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+.footer-redes-links a:hover{
+    color:var(--amarelo);
+    transform:translateX(3px);
+}
+
+.footer-redes-links i{
+    width:38px;
+    height:38px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50%;
+
+    color:var(--amarelo);
+
+    font-size:18px;
+}
+
+@media (max-width:991px){
+
+    .redes-navbar{
+        justify-content:center;
+        margin:14px 0 10px;
+    }
+
+    .redes-navbar a{
+        color:var(--azul-escuro);
+        border-color:rgba(0,59,255,.18);
+    }
+
+    .btn-whatsapp-header{
+        margin-top:10px;
     }
 }
